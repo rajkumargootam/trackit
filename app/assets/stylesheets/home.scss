@@ -9,10 +9,18 @@
     font-size: 10vmin;
   }
 
-  a#login-triger {
-    background-color: $primary-color;
+  a#login-trigger {
+    background-color: $dark-color;
     color: $light-color;
     font-weight:$thin-font-weight;
+    font-size: 5vmin;
+    padding: 0.5vmin 8vmin;
+    margin-top: 2vmin;
+    transition:background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: darken($dark-color, 5%);
+    }
   }
 
 }
