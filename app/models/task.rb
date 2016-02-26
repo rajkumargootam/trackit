@@ -15,6 +15,7 @@ class Task < ActiveRecord::Base
     IN_PROGRESS = 1
     FINISHED = 2
   end
+  validates :title, presence: true
 
   def not_started?
     self.status == Status::NOT_STARTED
