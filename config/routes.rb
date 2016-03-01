@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'task_shares/new'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :tasks, except: [:show]
+  resources :task_shares, only: [:new, :create]
 
   # You can have the root of your site routed with "root"
    root 'home#land'
