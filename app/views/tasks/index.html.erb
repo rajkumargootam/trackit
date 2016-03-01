@@ -1,5 +1,6 @@
 <%= link_to "Add New task", new_task_path, class: "btn btn-primary btn-sm pull-right" %>
-<h1>Tasks </h1>
+<%= link_to "Tasks Shared with Me", shared_tasks_path, class: "btn btn-primary btn-sm pull-right" %>
+<h1>My Tasks</h1>
 
 <h2>Not Started</h2>
 <ul id="tasks_<%= Task::Status::NOT_STARTED %>">

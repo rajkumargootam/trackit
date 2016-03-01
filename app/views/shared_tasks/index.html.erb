@@ -1,0 +1,6 @@
+<h1>Tasks Shared with Me</h1>
+<ul>
+  <% @shared_tasks.each do |shared_task| %>
+    <%= shared_task.task.title %>
+  <% end %>
+</ul>
