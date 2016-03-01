@@ -5,6 +5,7 @@ class TasksController < ApplicationController
     @not_started_tasks = current_user.tasks.where(status: Task::Status::NOT_STARTED)
     @in_progress_tasks = current_user.tasks.where(status: Task::Status::IN_PROGRESS)
     @finished_tasks = current_user.tasks.where(status: Task::Status::FINISHED)
+    @shared_tasks = current_user.shared_tasks
   end
   def new
     @task = current_user.tasks.new
