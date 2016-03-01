@@ -5,6 +5,8 @@
 <%= link_to("finish", task_path(task, status: Task::Status::FINISHED),method: :patch, remote: true) if task.in_progress? %>
 <%= content_tag(:span, "|") if task.in_progress?  %>
 <%= link_to("Shelf", task_path(task, status: Task::Status::NOT_STARTED),method: :patch, remote: true) if task.in_progress? || task.finished? %>
+<%= content_tag(:span, "|") %>
+<%= link_to "Share", "" %>
 
   )
 </li>

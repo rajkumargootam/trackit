@@ -8,6 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="<%= 'container' unless controller_name == 'home' && action_name == 'land' %>">
   <% if user_signed_in? %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
   (Logged in as: <%= current_user.email %>)
@@ -16,6 +17,6 @@
   <% end %>
  <%= flash_messages_tags %>
   <%= yield %>
-
+</div>
 </body>
 </html>
